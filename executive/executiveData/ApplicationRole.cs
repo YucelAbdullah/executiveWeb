@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace executiveData
 {
-    public class ApplicationRole:IdentityRole<Guid>
+    public class ApplicationRole : IdentityRole<Guid>
     {
 
     }
