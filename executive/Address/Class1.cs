@@ -1,4 +1,4 @@
-﻿namespace executiveData
+﻿namespace Address
 {
     public class Class1
     {
