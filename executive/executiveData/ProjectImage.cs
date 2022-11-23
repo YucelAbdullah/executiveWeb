@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace executiveData
 {
-    public class ProjectImage
+    public class ProjectImage:EntityBase
     {
         public Guid ProjectId { get; set; }
         public byte[] Image { get; set; }

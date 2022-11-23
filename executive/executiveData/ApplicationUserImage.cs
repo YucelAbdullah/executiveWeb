@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace executiveData
 {
-    public class ApplicationUserImage
+    public class ApplicationUserImage:EntityBase
     {
 
         public Guid ApplicationUserId { get; set; }

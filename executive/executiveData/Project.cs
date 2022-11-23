@@ -40,9 +40,9 @@ namespace executiveData
         public virtual Customer Customer { get; set; }
 
 
-        [NotMapped]
+        //[NotMapped]
 
-        public string ImageSrc => ProjectImage.Any() ? $"data:image/jpeg;base64, {Convert.ToBase64String(ProjectImage.First().Image)}" : "/Images/resim-yok.jpg";
+        //public string ImageSrc => ProjectImage.Any() ? $"data:image/jpeg;base64, {Convert.ToBase64String(ProjectImage.First().Image)}" : "/Images/resim-yok.jpg";
 
         public virtual ICollection <ApplicationUser> ApplicationUsers { get; set; } = new HashSet<ApplicationUser>();
 

@@ -22,7 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(config =>
 
             config.UseNpgsql
                     (builder.Configuration.GetConnectionString("Npgsql"),
-                     options => options.MigrationsAssembly("MigrationsNpgsql"));
+                     options => options.MigrationsAssembly("MigrationNpgsqlServer"));
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             break;
 
@@ -30,7 +30,7 @@ builder.Services.AddDbContext<AppDbContext>(config =>
         default:
             config.UseSqlServer
                 (builder.Configuration.GetConnectionString("SqlServer"),
-                options => options.MigrationsAssembly("MigrationsSqlServer"));
+                options => options.MigrationsAssembly("MigrationSqlServer"));
             break;
 
 
@@ -64,7 +64,7 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(
 
 var app = builder.Build();
 
-builder.Services.AddAuthentication().AddCookie();
+//builder.Services.AddAuthentication().AddCookie();
 
 
 // Configure the HTTP request pipeline.
