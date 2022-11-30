@@ -1,0 +1,51 @@
+﻿@model executiveData.Project
+@{
+
+    ViewData["Title"] = "Proje Ekleme";
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            Proje Eklemek için aşağıdaki formu kullanınız
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosedArea"></label>
+                <input asp-for="ClosedArea" class="form-control" />
+                <span asp-validation-for="ClosedArea"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Descriptions"></label>
+                <textarea asp-for="Descriptions" class="summernote"></textarea>
+            </div>
+
+
+            <hr />
+            <a class="btn btn-link" asp-action="Index">İptal</a>
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-save"></i>
+                Kaydet
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <partial name="_SummerNotePartial" />
+    <partial name="_ImagePreviewPartial" />
+
+
+}

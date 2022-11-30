@@ -16,6 +16,11 @@ namespace executiveData
     {
         New, Canceled, OnProgress, Finished
     }
+
+    public enum ProjectType
+    {
+        Konut, SanayiYapısı, Tadilat, TarihiEser
+    }
     public class Project : EntityBase
     {
         [Display(Name = "Ad")]
@@ -25,6 +30,9 @@ namespace executiveData
         public int ClosedArea { get; set; }
 
         public ProjectStatus Status { get; set; }
+
+        public ProjectType Type { get; set; }
+
 
         public Guid CustomerId { get; set; }
 

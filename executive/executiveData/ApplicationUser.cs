@@ -13,9 +13,22 @@ namespace executiveData
         [Display(Name = "Kadın")]
         Female
     }
+
+    public enum Job
+    {
+        [Display(Name = "İnşaat Mühendisi")]
+        CivilEngineer,
+        [Display(Name = "İnşaat Teknikeri")]
+        Technician,
+        [Display(Name = "Teknik Ressam")]
+        Draftsman
+
+    }
     public class ApplicationUser : IdentityUser<Guid>
     {
         public string Name { get; set; }
+
+        public Job Job { get; set; }
         public Genders? Gender { get; set; }
 
         public DateTime BirthDate { get; set; }

@@ -13,6 +13,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
     <PackageReference Include="SixLabors.ImageSharp.Web" Version="2.0.2" />
   </ItemGroup>
@@ -21,6 +22,10 @@
     <ProjectReference Include="..\executiveData\executiveData.csproj" />
     <ProjectReference Include="..\MigrationNpgsqlServer\MigrationNpgsqlServer.csproj" />
     <ProjectReference Include="..\MigrationSqlServer\MigrationSqlServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\" />
   </ItemGroup>
 
 </Project>
